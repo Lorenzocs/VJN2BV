@@ -666,7 +666,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -10038,13 +10038,14 @@ GameObject:
   - component: {fileID: 1317659666}
   - component: {fileID: 1317659665}
   - component: {fileID: 1317659664}
+  - component: {fileID: 1317659667}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &1317659664
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -10134,7 +10135,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -10954,7 +10955,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 150
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -14856,6 +14857,20 @@ Transform:
   - {fileID: 226791210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 45.228, y: -90, z: 90}
+--- !u!114 &1317659667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317659663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b69c495907bff34a8740cd6f471b25d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particulas: {fileID: 0}
+  cantidad: 0
 --- !u!1 &1347075260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14867,6 +14882,7 @@ GameObject:
   - component: {fileID: 1347075263}
   - component: {fileID: 1347075262}
   - component: {fileID: 1347075261}
+  - component: {fileID: 1347075264}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -14931,6 +14947,26 @@ RectTransform:
   m_AnchoredPosition: {x: 426.8744, y: -57.5}
   m_SizeDelta: {x: 132.5, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1347075264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347075260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1adf37048d94ba47bcf027a34611d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre: 
+  descripcion: 
+  "da\xF1o": 0
+  costo: 0
+  rango: 0
+  tipo: 0
+  type: {fileID: 11400000, guid: 570171691b50d3b4bab978208a18a3d6, type: 2}
+  laImagen: {fileID: 0}
 --- !u!1 &1350134747
 GameObject:
   m_ObjectHideFlags: 0
@@ -19616,6 +19652,58 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 1558458895}
   movement: 5
+--- !u!1 &1570887223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570887225}
+  - component: {fileID: 1570887224}
+  m_Layer: 0
+  m_Name: Arma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1570887224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570887223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1adf37048d94ba47bcf027a34611d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre: 
+  descripcion: 
+  "da\xF1o": 0
+  costo: 0
+  rango: 0
+  tipo: 0
+  type: {fileID: 11400000, guid: 570171691b50d3b4bab978208a18a3d6, type: 2}
+  laImagen: {fileID: 0}
+--- !u!4 &1570887225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570887223}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.2664666, y: 1.3789701, z: -0.1874411}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1614997339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6514032456011413247, guid: 3f168ea60c50d6b4dace36c473d66ad7, type: 3}
@@ -26058,3 +26146,4 @@ SceneRoots:
   - {fileID: 617063631}
   - {fileID: 1317659666}
   - {fileID: 2105557454}
+  - {fileID: 1570887225}
